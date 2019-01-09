@@ -1,4 +1,7 @@
 ﻿Imports Microsoft.VisualBasic
+Imports System.Data
+Imports System.Data.SqlClient
+
 
 Public Class cls_libro
     Private _idlibro As Integer
@@ -6,6 +9,11 @@ Public Class cls_libro
     Private _fecha_edicion As String
     '----
     Private _query As String
+
+    Dim miconexion As SqlConnection
+    Dim micomando As SqlCommand
+
+
 
 
 #Region "Propiedades"
@@ -35,12 +43,20 @@ Public Class cls_libro
 #End Region
 
 #Region "Metodos"
-    Public Function insertarlibro() As UInteger
+    Public Sub insertarlibro()
+
+        miconexion = New SqlConnection("Data Source=localhost;Initial Catalog=testlibro;Integrated Security=True")
+        miconexion.Open()
+
         _query = String.Format("EXEC [insertarLibro] '{0}','{1}'", _
                                Me.titulo, _
                                Me._fecha_edicion)
-        Me._idlibro = 
-    End Function
+        micomando = New SqlCommand(_query)
+        micomando.ExecuteNonQuery()
+
+        miconexion.Close()
+
+    End Sub
 #End Region
 
 End Class
