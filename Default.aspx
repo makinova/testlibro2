@@ -4,13 +4,23 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-   <div class="contenedor">
+    <div class="contenedor">
         <div class="divcompleto"><h2>Libros</h2>
         <p>Agregar/Editar</p>
         </div>
         <div class="divmitad">
+        <h2>  </h2>
+            <div class="divmitad"><span>Titulo</span></div>
+            <div class="divmitad"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
+            
+            <div class="divmitad" style="margin-top:10px;"><span>Edicion</span></div>
+            <div class="divmitad" style="margin-top:10px;">
+                <asp:TextBox ID="txt_edicion" runat="server" ReadOnly="True"></asp:TextBox>
+                <asp:Calendar ID="calendario" runat="server"></asp:Calendar>
+            </div>
         </div>
         <div class="divmitad">
+            <h2>Lista de Autores</h2>
         </div>
    </div>
 </asp:Content>
