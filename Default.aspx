@@ -24,11 +24,14 @@
         </div>
         <div class="divcompleto">
             <div class="divmitad">
-                <asp:Button ID="btn_guardar" runat="server" Text="Guardar" />
+                <div class="divmitad">
+                    <asp:Button ID="btn_guardar" runat="server" Text="Guardar" />
+                </div>
+                <div class="divmitad">
+                    <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" />
+                </div>
             </div>
-            <div class="divmitad">
-                <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" />
-            </div>
+           
         </div>
    </div>
 </asp:Content>
