@@ -11,7 +11,7 @@
         <div class="divmitad">
         <h2>  </h2>
             <div class="divmitad"><span>Titulo</span></div>
-            <div class="divmitad"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
+            <div class="divmitad"><asp:TextBox ID="txt_titulo" runat="server"></asp:TextBox></div>
             
             <div class="divmitad" style="margin-top:10px;"><span>Edicion</span></div>
             <div class="divmitad" style="margin-top:10px;">
