@@ -11,6 +11,7 @@ Public Class ctr_libro
         cls.titulo = titulo
         cls.fecha_edicion = fecha_edicion
 
+        cls.insertarlibro()
 
     End Sub
 

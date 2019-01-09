@@ -19,3 +19,12 @@ CREATE TABLE [autor_libro]
 	[id_libro] INT FOREIGN KEY REFERENCES [libro]([id_libro]) NOT NULL
 )
 GO
+
+
+
+-- Procedimientos
+CREATE PROCEDURE [insertarLibro]	@titulo VARCHAR(100),
+									@fecha_edicion DATETIME
+AS
+	INSERT INTO [libro] VALUES (@titulo,@fecha_edicion)
+GO

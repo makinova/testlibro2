@@ -51,7 +51,7 @@ Public Class cls_libro
         _query = String.Format("EXEC [insertarLibro] '{0}','{1}'", _
                                Me.titulo, _
                                Me._fecha_edicion)
-        micomando = New SqlCommand(_query)
+        micomando = New SqlCommand(_query,miconexion)
         micomando.ExecuteNonQuery()
 
         miconexion.Close()
