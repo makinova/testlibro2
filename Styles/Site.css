@@ -292,3 +292,26 @@ div.accountInfo
     text-align: right;
     padding-right: 10px;
 }
+
+/*---- default.aspx */
+
+div.contenedor 
+{
+    width:800px;
+    margin: 0 auto;
+}
+
+div.contenedor h2 {
+    text-align: center;
+}
+
+.divmitad
+{
+  float:left;
+  width:50%;   
+}
+.divcompleto
+{
+  float:left;
+  width:100%;   
+}
