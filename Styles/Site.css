@@ -295,13 +295,13 @@ div.accountInfo
 
 /*---- default.aspx */
 
-div.contenedor 
+.contenedor 
 {
     width:800px;
     margin: 0 auto;
 }
 
-div.contenedor h2 {
+.contenedor h2 {
     text-align: center;
 }
 
@@ -314,4 +314,10 @@ div.contenedor h2 {
 {
   float:left;
   width:100%;   
+}
+
+.centrar
+{
+    margin:0 auto;
+    width:60%;
 }

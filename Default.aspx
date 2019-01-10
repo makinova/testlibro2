@@ -6,7 +6,7 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="contenedor">
         <div class="divcompleto"><h2>Libros</h2>
-        <p>Agregar/Editar</p>
+        <p>Agregar</p>
         </div>
         <div class="divmitad">
         <h2>  </h2>
@@ -22,8 +22,9 @@
         <div class="divmitad">
             <h2>Lista de Autores</h2>
 
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" 
-                DataSourceID="SqlDataSource1" DataTextField="nombre" DataValueField="id_author">
+            <asp:CheckBoxList CssClass="centrar" ID="cbx_autores" runat="server" 
+                DataSourceID="SqlDataSource1" DataTextField="nombre" 
+                DataValueField="id_author">
             </asp:CheckBoxList>
 
 

@@ -10,8 +10,9 @@ Partial Class _Default
         Dim ctr As New ctr_libro
         Dim libro As String = Me.txt_titulo.Text
         Dim edicion As String = Me.txt_edicion.Text
+        Dim listado As CheckBoxList = Me.cbx_autores
 
-        ctr.insertarLibro(libro, edicion)
+        ctr.insertarLibro(libro, edicion,listado)
 
     End Sub
 End Class

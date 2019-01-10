@@ -30,12 +30,25 @@ GO
 
 -- Procedimientos
 CREATE PROCEDURE [insertarLibro]	@titulo VARCHAR(100),
-									@fecha_edicion DATETIME
+									@fecha_edicion DATETIME,
+									@IdLibro INT OUT
 AS
 	INSERT INTO [libro] VALUES (@titulo,@fecha_edicion)
+	SET @IdLibro = SCOPE_IDENTITY()
+	SELECT @IdLibro 'idLibro'
 GO
 
 CREATE PROCEDURE [listarAutores]
 AS
 	SELECT * FROM [autor]
+GO
+
+CREATE PROCEDURE [insertarAutorLibro]	@idAutor INT,
+										@idLibro INT,
+										@isSelected INT
+AS
+	IF (@isSelected = 1 )
+	BEGIN
+		INSERT INTO [autor_libro] VALUES (@idAutor,@idLibro)
+	END
 GO
