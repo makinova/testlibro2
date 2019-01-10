@@ -52,3 +52,10 @@ AS
 		INSERT INTO [autor_libro] VALUES (@idAutor,@idLibro)
 	END
 GO
+
+CREATE PROCEDURE [listarLibrosAutores]
+AS
+	SELECT b.titulo,b.fecha_edicion,count(a.id_autor) 'Autores' FROM autor_libro a
+	INNER JOIN libro b on b.id_libro=a.id_libro
+	group by a.id_libro,b.fecha_edicion,b.titulo
+GO

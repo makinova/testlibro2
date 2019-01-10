@@ -5,8 +5,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="contenedor">
-        <div class="divcompleto"><h2>Libros</h2>
-        <p>Agregar</p>
+        <div class="divcompleto"><h2>Agregar Libros</h2>
         </div>
         <div class="divmitad">
         <h2>  </h2>

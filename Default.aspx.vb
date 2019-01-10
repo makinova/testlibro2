@@ -12,7 +12,10 @@ Partial Class _Default
         Dim edicion As String = Me.txt_edicion.Text
         Dim listado As CheckBoxList = Me.cbx_autores
 
-        ctr.insertarLibro(libro, edicion,listado)
+        ctr.insertarLibro(libro, edicion, listado)
+
+        Response.Redirect("Listado.aspx")
+
 
     End Sub
 End Class
