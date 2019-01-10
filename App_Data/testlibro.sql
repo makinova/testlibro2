@@ -20,11 +20,22 @@ CREATE TABLE [autor_libro]
 )
 GO
 
+-- Rellenando Listado de Autores
 
+INSERT INTO [autor] VALUES ('Giacomo Gulizzoni')
+INSERT INTO [autor] VALUES ('Marco Botton')
+INSERT INTO [autor] VALUES ('Mariah Maclachlan')
+INSERT INTO [autor] VALUES ('Valerie Liberty')
+GO
 
 -- Procedimientos
 CREATE PROCEDURE [insertarLibro]	@titulo VARCHAR(100),
 									@fecha_edicion DATETIME
 AS
 	INSERT INTO [libro] VALUES (@titulo,@fecha_edicion)
+GO
+
+CREATE PROCEDURE [listarAutores]
+AS
+	SELECT * FROM [autor]
 GO

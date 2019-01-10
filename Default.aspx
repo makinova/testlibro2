@@ -21,6 +21,18 @@
         </div>
         <div class="divmitad">
             <h2>Lista de Autores</h2>
+
+            <asp:CheckBoxList ID="CheckBoxList1" runat="server" 
+                DataSourceID="SqlDataSource1" DataTextField="nombre" DataValueField="id_author">
+            </asp:CheckBoxList>
+
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:testlibroConnectionString %>" 
+                SelectCommand="listarAutores" SelectCommandType="StoredProcedure">
+            </asp:SqlDataSource>
+
+
         </div>
         <div class="divcompleto">
             <div class="divmitad">
